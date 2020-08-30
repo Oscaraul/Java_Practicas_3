@@ -29,8 +29,11 @@ var calculadora = (function (num1, num2) {
 
     }
 })
+
 */
 
+
+/*
 function ejecutaproceso(micallback) {
   micallback('devuelve valor')
 }
@@ -38,3 +41,4 @@ function ejecutaproceso(micallback) {
 ejecutaproceso(function (valordevuelto) {
   console.log('respondo con '+valordevuelto);
 })
+*/
