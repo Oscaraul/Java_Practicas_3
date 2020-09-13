@@ -42,3 +42,10 @@ ejecutaproceso(function (valordevuelto) {
   console.log('respondo con '+valordevuelto);
 })
 */
+if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(function(position){
+    var positionInfo=position;
+  })
+}else{
+  alert('El navegador nno soporta geolocalizalcion')
+}
