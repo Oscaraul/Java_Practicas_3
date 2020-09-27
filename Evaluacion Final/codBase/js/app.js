@@ -19,7 +19,7 @@ this.cero.addEventListener("click",function(){ alert("Presionando la tecla del c
 
 this.signoMas.addEventListener("click",function(){ alert("Presionando la tecla del mas") })
 
-uno.addEventListener("click",function(){ alert("Presionando la tecla del uno") })
+uno.addEventListener("click",function(){ this.calculadora.pantalla.innerHTML = "1" })
 
 }
 
