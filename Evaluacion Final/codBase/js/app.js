@@ -5,6 +5,7 @@ var calculador = {
   menos: document.getElementById("menos"),
   por : document.getElementById("por"),
   division: document.getElementById("dividido"),
+  on: document.getElementById("on"),
 
   cero: document.getElementById("0"),
   uno: document.getElementById("1"),
@@ -35,8 +36,9 @@ var calculador = {
     this.ocho.addEventListener("click", this.ochoEvent);
     this.nueve.addEventListener("click", this.nueveEvent);
 
-    this.punto.addEventListener("click", this.puntoevent);
+    this.punto.addEventListener("click", this.puntoEvent);
     this.igual.addEventListener("click", this.igualEvent);
+    this.on.addEventListener("click", this.onEvent);
 
     calculador.pantalla.textContent = "0"
   },
@@ -148,7 +150,7 @@ var calculador = {
 
   },
 
-  puntoevent: function () {
+  puntoEvent: function () {
     if (calculador.pantalla.textContent.indexOf(".")  == -1)
       if (calculador.pantalla.textContent.length <= 7)
         if (calculador.pantalla.textContent == "0")
@@ -158,6 +160,9 @@ var calculador = {
 
   },
 
+  onEvent: function () {
+    calculador.pantalla.innerHTML = "0"
+  },
 }
 
 calculador.init();
