@@ -25,7 +25,7 @@ var calculador = {
   operacion:"",
 
   init: function () {
-    this.cero.addEventListener("click", this.ceroEvent);
+    this.cero.addEventListener("click", this.ceroEvent,this.clickAbajo,this.clickArriba);
     this.uno.addEventListener("click", this.unoEvent);
     this.dos.addEventListener("click", this.dosEvent);
     this.tres.addEventListener("click", this.tresEvent);
@@ -163,6 +163,17 @@ var calculador = {
   onEvent: function () {
     calculador.pantalla.innerHTML = "0"
   },
+
+  clickAbajo: function () {
+    calculador.cero.setAttribute("style", "transform: scale (0.95,0.95)")
+  },
+
+  clickArriba:function () {
+    calculador.cero.setAttribute("style","transform:scale(1,1)")
+  }
+
+
+
 }
 
 calculador.init();
