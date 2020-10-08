@@ -1,51 +1,10 @@
-/*
-var calculadora = (function (num1, num2) {
-    var resultado= 0
+const btn = document.querySelector('button');
 
-    function actualizarResultado(nuevoResultado) {
-      resultado=nuevoResultado
-
-    }
-    return {
-      sumar: function () {
-          var resultado = num1 + num2
-          actualizarResultado(resultado)
-      },
-      restar: function () {
-          var resultado = num1 - num2
-          actualizarResultado(resultado)
-      },
-      multiplicar: function () {
-          var resultado = num1 * num2
-          actualizarResultado(resultado)
-      },
-      dividir: function () {
-          var resultado = num1 / num2
-          actualizarResultado(resultado)
-      },
-      resultado: function () {
-          return resultado
-      }
-
-    }
-})
-
-*/
-
-
-/*
-function ejecutaproceso(micallback) {
-  micallback('devuelve valor')
+function random(number) {
+  return Math.floor(Math.random() * (number+1));
 }
 
-ejecutaproceso(function (valordevuelto) {
-  console.log('respondo con '+valordevuelto);
-})
-*/
-if(navigator.geolocation){
-  navigator.geolocation.getCurrentPosition(function(position){
-    var positionInfo=position;
-  })
-}else{
-  alert('El navegador nno soporta geolocalizalcion')
+btn.onclick = function() {
+  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  document.body.style.backgroundColor = rndCol;
 }

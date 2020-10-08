@@ -25,7 +25,7 @@ var calculador = {
   operacion:"",
 
   init: function () {
-    this.cero.addEventListener("click", this.ceroEvent(),this.clickAbajo(),this.clickArriba());
+    this.cero.addEventListener("click", this.ceroEvent);
     this.uno.addEventListener("click", this.unoEvent);
     this.dos.addEventListener("click", this.dosEvent);
     this.tres.addEventListener("click", this.tresEvent);
@@ -40,7 +40,11 @@ var calculador = {
     this.igual.addEventListener("click", this.igualEvent);
     this.on.addEventListener("click", this.onEvent);
 
-    calculador.pantalla.textContent = "0"
+    calculador.pantalla.textContent = "0";
+
+    this.clickBotones();
+
+
   },
 
   ceroEvent: function () {
@@ -164,15 +168,26 @@ var calculador = {
     calculador.pantalla.innerHTML = "0"
   },
 
-  clickAbajo: function () {
-    calculador.cero.setAttribute("style", "transform: scale (0.95,0.95)")
+  clickBotones: function () {
+    const listID=["0","1","2","3","4","5","6","7","8","9"]
+
+    for (const item of listID) {
+      var doc = document.getElementById(item);
+
+      doc.addEventListener('mousedown', function() {
+      doc.setAttribute("style", "transform:scale(0.95,0.95)");
+      })
+
+      doc.addEventListener('mouseup', function() {
+      doc.setAttribute("style", "transform:scale(1,1)");
+      })
+
+    }
+
+
+
+
   },
-
-  clickArriba:function () {
-    calculador.cero.setAttribute("style","transform:scale(1,1)")
-  },
-
-
 
 }
 
