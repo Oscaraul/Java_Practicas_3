@@ -6,6 +6,8 @@ var calculador = {
   por : document.getElementById("por"),
   division: document.getElementById("dividido"),
   on: document.getElementById("on"),
+  sign: document.getElementById("sign"),
+  raiz: document.getElementById("raiz"),
 
   cero: document.getElementById("0"),
   uno: document.getElementById("1"),
@@ -169,25 +171,24 @@ var calculador = {
   },
 
   clickBotones: function () {
-    const listID=["0","1","2","3","4","5","6","7","8","9"]
+    const listID = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "punto", "igual", "mas", "menos", "por", "dividido", "on", "sign", "raiz"]
 
     for (const item of listID) {
+    setTimeout(function () {
       var doc = document.getElementById(item);
 
-      doc.addEventListener('mousedown', function() {
-      doc.setAttribute("style", "transform:scale(0.95,0.95)");
+      doc.addEventListener('mousedown', function () {
+        doc.setAttribute("style", "transform:scale(0.95,0.95)");
       })
 
-      doc.addEventListener('mouseup', function() {
+      doc.addEventListener('mouseup', function () {
       doc.setAttribute("style", "transform:scale(1,1)");
       })
-
+    }, 200)
     }
-
-
-
-
   },
+
+
 
 }
 
