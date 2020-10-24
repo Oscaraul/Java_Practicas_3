@@ -25,6 +25,8 @@ var calculador = {
   valoralmacenado: 0,
 
   operacion:"",
+  operandoA: 0,
+  operandoB: 0,
 
   init: function () {
     this.cero.addEventListener("click", this.ceroEvent);
@@ -188,7 +190,10 @@ var calculador = {
     }
   },
 
-
+  suma: function () {
+    this.operacion="+";
+    this.operandoA=this.pantalla.innerHTML;
+  }
 
 }
 
