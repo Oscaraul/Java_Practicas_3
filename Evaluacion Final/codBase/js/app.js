@@ -193,8 +193,15 @@ var calculador = {
   suma: function () {
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
-  }
+    this.pantalla.innerHTML="0"
+  },
 
+  oIgual: function () {
+    if (this.operacion=="+") {
+      this.pantalla.innerHTML = this.operandoA + this.operandoB;
+
+    }
+  }
 }
 
 calculador.init();
