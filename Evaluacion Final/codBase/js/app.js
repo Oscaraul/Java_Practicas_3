@@ -206,5 +206,5 @@ var calculador = {
         break;
     }
   }
-
+}
 calculador.init();
