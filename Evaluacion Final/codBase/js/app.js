@@ -196,15 +196,15 @@ var calculador = {
         this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
         break;
       case "-":
-        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        this.valoralmacenado=eval(this.operandoA-this.opoperandoB);
         break;
       case "*":
-        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        this.valoralmacenado=eval(this.operandoA*this.opoperandoB);
         break;
       case "/":
-        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        this.valoralmacenado=eval(this.operandoA/this.opoperandoB);
         break;
-    }    
+    }
   }
 
 calculador.init();
