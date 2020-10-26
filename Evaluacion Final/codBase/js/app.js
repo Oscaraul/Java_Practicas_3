@@ -190,6 +190,21 @@ var calculador = {
     }
   },
 
-
+  calculoOperaciones: function(operandoA,operandoB,operacion){
+    switch (operacion) {
+      case "+":
+        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        break;
+      case "-":
+        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        break;
+      case "*":
+        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        break;
+      case "/":
+        this.valoralmacenado=eval(this.operandoA+this.opoperandoB);
+        break;
+    }    
+  }
 
 calculador.init();
