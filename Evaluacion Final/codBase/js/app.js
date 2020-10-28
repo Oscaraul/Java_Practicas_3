@@ -191,6 +191,7 @@ var calculador = {
   },
 
   suma: function () {
+    console.log("Suma")
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
     this.pantalla.innerHTML="0"
