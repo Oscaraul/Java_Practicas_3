@@ -194,12 +194,13 @@ var calculador = {
     console.log("Suma")
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
-    this.pantalla.innerHTML="0"
+    //this.pantalla.innerHTML="0" Esta línea es para poner la pantalla
   },
 
   oIgual: function () {
+    Number(this.operandoB) = this.pantalla.innerHTML;
     if (this.operacion=="+") {
-      this.pantalla.innerHTML = this.operandoA + this.operandoB;
+      this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
 
     }
   }
