@@ -194,11 +194,11 @@ var calculador = {
 
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
-    
+
   },
 
   oIgual: function () {
-    Number(this.operandoB) = this.pantalla.innerHTML;
+    this.operandoB= this.pantalla.innerHTML;
     if (this.operacion=="+") {
       this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
 
