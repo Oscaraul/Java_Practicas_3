@@ -23,7 +23,6 @@ var calculador = {
   pantalla: document.getElementById("display"),
 
   valoralmacenado: 0,
-
   operacion:"",
   operandoA: 0,
   operandoB: 0,
@@ -191,19 +190,19 @@ var calculador = {
   },
 
   suma: function () {
-
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
-
+    this.pantalla.textContent=0;
   },
 
   oIgual: function () {
     this.operandoB= this.pantalla.innerHTML;
     if (this.operacion=="+") {
       this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
-
     }
   }
+
+
 }
 
 calculador.init();
