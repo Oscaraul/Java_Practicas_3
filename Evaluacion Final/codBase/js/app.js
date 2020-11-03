@@ -200,6 +200,7 @@ var calculador = {
     if (this.operacion=="+") {
       this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
     }
+    
   }
 
 
