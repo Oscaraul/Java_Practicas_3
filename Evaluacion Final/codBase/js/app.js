@@ -199,8 +199,9 @@ var calculador = {
     this.operandoB= this.pantalla.innerHTML;
     if (this.operacion=="+") {
       this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
+      this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
     }
-    
+
   }
 
 
