@@ -195,11 +195,32 @@ var calculador = {
     this.pantalla.textContent=0;
   },
 
+  resta: function () {
+    this.operacion="-";
+    this.operandoA=this.pantalla.innerHTML;
+    this.pantalla.textContent=0;
+  },
+
   oIgual: function () {
     this.operandoB= this.pantalla.innerHTML;
-    if (this.operacion=="+") {
-      this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
-      this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+    switch (this.operacion) {
+      case "+":
+        this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
+        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+        break;
+      case "-":
+        this.pantalla.innerHTML =Number(this.operandoA)  - Number(this.operandoB);
+        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+        break;
+      case "*":
+        this.pantalla.innerHTML =Number(this.operandoA)  * Number(this.operandoB);
+        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+        break;
+      default:
+        this.pantalla.innerHTML =Number(this.operandoA)  * Number(this.operandoB);
+        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+        break;
+
     }
 
   }
