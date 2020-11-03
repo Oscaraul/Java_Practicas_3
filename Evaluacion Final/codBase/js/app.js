@@ -207,6 +207,7 @@ var calculador = {
     switch (this.operacion) {
       case "+":
         resultado =Number(this.operandoA)  + Number(this.operandoB);
+        console.log(resultado);
       case "-":
         resultado =Number(this.operandoA)  - Number(this.operandoB);
       case "*":
