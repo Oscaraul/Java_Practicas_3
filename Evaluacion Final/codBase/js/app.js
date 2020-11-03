@@ -203,24 +203,18 @@ var calculador = {
 
   oIgual: function () {
     this.operandoB= this.pantalla.innerHTML;
+    var resultado= 0;
     switch (this.operacion) {
       case "+":
-        this.pantalla.innerHTML =Number(this.operandoA)  + Number(this.operandoB);
-        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
-        break;
+        resultado =Number(this.operandoA)  + Number(this.operandoB);
       case "-":
-        this.pantalla.innerHTML =Number(this.operandoA)  - Number(this.operandoB);
-        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
-        break;
+        resultado =Number(this.operandoA)  - Number(this.operandoB);
       case "*":
-        this.pantalla.innerHTML =Number(this.operandoA)  * Number(this.operandoB);
-        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
-        break;
+        resultado =Number(this.operandoA)  * Number(this.operandoB);
       default:
-        this.pantalla.innerHTML =Number(this.operandoA)  * Number(this.operandoB);
-        this.pantalla.innerHTML = this.pantalla.innerHTML.substring(0, 8);
+        resultado =Number(this.operandoA)  + Number(this.operandoB);
         break;
-
+      this.pantalla.innerHTML = resultado.toString().substring(0, 8);
     }
 
   }
