@@ -206,23 +206,23 @@ var calculador = {
     var resultado= 0;
     switch (this.operacion) {
       case "+":
-        resultado =Number(this.operandoA)  + Number(this.operandoB);
+        resultado =parseFloat(this.operandoA)  + parseFloat(this.operandoB);
         break;
 
       case "-":
-        resultado =Number(this.operandoA)  - Number(this.operandoB);
+        resultado =parseFloat(this.operandoA)  - parseFloat(this.operandoB);
         break;
 
       case "*":
-        resultado =Number(this.operandoA)  * Number(this.operandoB);
+        resultado =parseFloat(this.operandoA)  * parseFloat(this.operandoB);
         break;
 
       default:
-        resultado =Number(this.operandoA)  + Number(this.operandoB);
+        resultado =parseFloat(this.operandoA)  + parseFloat(this.operandoB);
         break;
     }
     this.pantalla.innerHTML = resultado.toString().substring(0, 8);
-    console.log(resultado);
+    console.log(this.operacion);
   }
 
 
