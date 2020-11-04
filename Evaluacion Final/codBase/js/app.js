@@ -207,17 +207,22 @@ var calculador = {
     switch (this.operacion) {
       case "+":
         resultado =Number(this.operandoA)  + Number(this.operandoB);
-        console.log(resultado);
+        break;
+
       case "-":
         resultado =Number(this.operandoA)  - Number(this.operandoB);
+        break;
+
       case "*":
         resultado =Number(this.operandoA)  * Number(this.operandoB);
+        break;
+
       default:
         resultado =Number(this.operandoA)  + Number(this.operandoB);
         break;
-      this.pantalla.innerHTML = resultado.toString().substring(0, 8);
     }
-
+    this.pantalla.innerHTML = resultado.toString().substring(0, 8);
+    console.log(resultado);
   }
 
 
