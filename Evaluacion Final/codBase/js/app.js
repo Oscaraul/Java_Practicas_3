@@ -192,13 +192,25 @@ var calculador = {
   suma: function () {
     this.operacion="+";
     this.operandoA=this.pantalla.innerHTML;
-    this.pantalla.textContent=0;
+    this.pantalla.textContent=" ";
   },
 
   resta: function () {
     this.operacion="-";
     this.operandoA=this.pantalla.innerHTML;
-    this.pantalla.textContent=0;
+    this.pantalla.textContent=" ";
+  },
+
+  multiplica:function () {
+    this.operacion="*";
+    this.operandoA=this.pantalla.innerHTML;
+    this.pantalla.textContent=" ";
+  },
+
+  divide: function () {
+    this.operacion="/";
+    this.operandoA=this.pantalla.innerHTML;
+    this.pantalla.textContent=" ";
   },
 
   oIgual: function () {
@@ -218,11 +230,16 @@ var calculador = {
         break;
 
       default:
-        resultado =parseFloat(this.operandoA)  + parseFloat(this.operandoB);
+        resultado =parseFloat(this.operandoA)  / parseFloat(this.operandoB);
         break;
     }
     this.pantalla.innerHTML = resultado.toString().substring(0, 8);
     console.log(this.operacion);
+  },
+
+  realesNumeros: function () {
+    this.pantalla.innerHTML=this.pantalla.innerHTML*-1;
+
   }
 
 
